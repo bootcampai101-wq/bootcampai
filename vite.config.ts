@@ -1,30 +1,16 @@
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
-
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
 
 export default defineConfig({
-  vite: {
-    server: {
-      host: true,
-      allowedHosts: true,
-    },
-
-
-    ssr: {
-      noExternal: [
-        "@tanstack/start",
-        "@tanstack/start-server-core",
-        "@tanstack/start-client-core",
-      ],
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
     },
   },
-
-
-  tanstackStart: {
-    server: {
-      entry: "server",
-    },
+  server: {
+    host: true,
+    allowedHosts: true,
   },
-
-
-  nitro: true,
 });
