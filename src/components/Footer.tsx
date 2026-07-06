@@ -11,42 +11,42 @@ const Footer = () => {
               <span className="text-sm font-normal tracking-wide">Wild Haven</span>
             </div>
             <p className="text-background/70 text-xs font-light leading-relaxed max-w-xs">
-              Creating meaningful connections with nature through sustainable off-grid experiences.
+              Menciptakan hubungan yang bermakna dengan alam melalui pengalaman off-grid yang berkelanjutan.
             </p>
           </div>
 
           {/* Pages Row - Two Columns on Mobile */}
           <div>
-            <h4 className="text-sm font-medium mb-4">Pages</h4>
+            <h4 className="text-sm font-medium mb-4">Halaman</h4>
             <ul className="grid grid-cols-2 gap-x-8 gap-y-3">
               <li>
                 <Link to="/" className="text-background/70 hover:text-background smooth-hover text-xs font-light">
-                  Home
+                  Beranda
                 </Link>
               </li>
               <li>
                 <Link to="/locations" className="text-background/70 hover:text-background smooth-hover text-xs font-light">
-                  Locations
+                  Lokasi
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="text-background/70 hover:text-background smooth-hover text-xs font-light">
-                  About
+                  Tentang
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-background/70 hover:text-background smooth-hover text-xs font-light">
-                  Contact
+                  Kontak
                 </Link>
               </li>
               <li>
                 <a href="/#booking" className="text-background/70 hover:text-background smooth-hover text-xs font-light">
-                  Book Now
+                  Pesan Sekarang
                 </a>
               </li>
               <li>
                 <Link to="/admin" className="text-background/70 hover:text-background smooth-hover text-xs font-light">
-                  Admin Panel
+                  Panel Admin
                 </Link>
               </li>
             </ul>
@@ -54,7 +54,7 @@ const Footer = () => {
 
           {/* Contact Row */}
           <div>
-            <h4 className="text-sm font-medium mb-4">Contact Us</h4>
+            <h4 className="text-sm font-medium mb-4">Hubungi Kami</h4>
             <div className="flex flex-col gap-2 mb-8">
               <a href="tel:085198521477" className="text-background/70 hover:text-background smooth-hover text-xs font-light flex items-center gap-2">
                 <Phone className="h-3 w-3" />
@@ -62,7 +62,7 @@ const Footer = () => {
               </a>
             </div>
 
-            <h4 className="text-sm font-medium mb-4">Follow Us</h4>
+            <h4 className="text-sm font-medium mb-4">Ikuti Kami</h4>
             <div className="flex items-center gap-4">
               <a href="#" className="text-background/70 hover:text-background smooth-hover">
                 <Instagram className="h-4 w-4" />

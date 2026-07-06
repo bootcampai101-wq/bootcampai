@@ -37,15 +37,15 @@ const Navigation = ({
     }
   };
   const navItems = [{
-    label: "Locations",
+    label: "Lokasi",
     href: "/locations",
     isRoute: true
   }, {
-    label: "About",
+    label: "Tentang",
     href: "/about",
     isRoute: true
   }, {
-    label: "Contact",
+    label: "Kontak",
     href: "/contact",
     isRoute: true
   }];
@@ -76,7 +76,7 @@ const Navigation = ({
                   {item.label}
                 </a>)}
             <Button variant="outline" size="sm" className={`rounded-full smooth-hover text-[11px] uppercase tracking-wider font-normal backdrop-blur-md border border-white/30 shadow-[0_4px_30px_rgba(0,0,0,0.1)] px-5 ${isDark || !isScrolled ? "bg-white/10 text-white hover:bg-primary/80 hover:text-white hover:border-primary/80" : "bg-white/20 text-foreground hover:bg-primary/80 hover:text-white hover:border-primary/80"}`} onClick={handleBookNow}>
-              Book Now
+              Pesan Sekarang
             </Button>
           </div>
 
@@ -108,7 +108,7 @@ const Navigation = ({
           setIsMobileMenuOpen(false);
           handleBookNow();
         }}>
-              Book Now
+              Pesan Sekarang
             </Button>
           </motion.div>}
       </AnimatePresence>

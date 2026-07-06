@@ -7,25 +7,25 @@ const features = [
   {
     icon: Leaf,
     title: "100% Off-Grid",
-    description: "Completely sustainable living with solar power and composting systems",
+    description: "Hidup berkelanjutan sepenuhnya dengan tenaga surya dan sistem pengomposan",
     videoUrl: "https://videos.pexels.com/video-files/4460100/4460100-hd_1920_1080_30fps.mp4",
   },
   {
     icon: Wifi,
-    title: "Digital Detox",
-    description: "No wifi, no signal - just pure connection with nature and yourself",
+    title: "Detoks Digital",
+    description: "Tanpa wifi, tanpa sinyal - hanya koneksi murni dengan alam dan diri sendiri",
     videoUrl: "https://videos.pexels.com/video-files/4280450/4280450-hd_1920_1080_30fps.mp4",
   },
   {
     icon: Droplets,
-    title: "Natural Water",
-    description: "Fresh spring water and eco-friendly facilities for your comfort",
+    title: "Air Alami",
+    description: "Air mata air segar dan fasilitas ramah lingkungan untuk kenyamanan Anda",
     videoUrl: "https://videos.pexels.com/video-files/5487781/5487781-hd_1920_1080_30fps.mp4",
   },
   {
     icon: Sun,
-    title: "Scenic Views",
-    description: "Wake up to breathtaking sunrises in untouched wilderness",
+    title: "Pemandangan Indah",
+    description: "Bangun dengan matahari terbit yang menakjubkan di alam liar yang masih asli",
     videoUrl: "https://videos.pexels.com/video-files/4460098/4460098-hd_1920_1080_30fps.mp4",
   },
 ];
@@ -45,13 +45,13 @@ const Experience = () => {
           className="text-center mb-20"
         >
           <span className="text-[11px] uppercase tracking-wider text-muted-foreground mb-4 block">
-            The Experience
+            Pengalaman
           </span>
           <h2 className="text-2xl md:text-3xl font-light mb-4 text-foreground tracking-tight">
-            Simplicity Meets Comfort
+            Kesederhanaan Bertemu Kenyamanan
           </h2>
           <p className="text-sm text-muted-foreground max-w-md mx-auto font-light">
-            Embrace simplicity without sacrificing comfort
+            Rangkul kesederhanaan tanpa mengorbankan kenyamanan
           </p>
         </motion.div>
 

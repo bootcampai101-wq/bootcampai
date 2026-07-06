@@ -55,7 +55,7 @@ const Locations = () => {
         >
           <div className="text-center mb-12">
             <span className="text-[11px] uppercase tracking-wider text-muted-foreground mb-4 block">
-              Our Locations
+              Lokasi Kami
             </span>
             <h1 className="text-2xl md:text-3xl font-light tracking-tight text-foreground mb-4">
               All Spots
@@ -123,8 +123,8 @@ const Locations = () => {
                       </div>
                       <div className="flex items-center justify-between">
                         <div>
-                          <span className="text-xl font-light text-foreground">${location.price}</span>
-                          <span className="text-muted-foreground text-xs font-light">/night</span>
+                          <span className="text-xl font-light text-foreground">Rp {location.price.toLocaleString('id-ID')}</span>
+                          <span className="text-muted-foreground text-xs font-light">/malam</span>
                         </div>
                         <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 text-xs font-light">
                           View Details

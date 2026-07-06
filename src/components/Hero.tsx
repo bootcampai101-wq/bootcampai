@@ -95,7 +95,7 @@ const Hero = () => {
           onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
           className="mt-6 flex items-center gap-3 bg-white text-foreground px-6 py-3 rounded-full text-sm tracking-wide hover:bg-white/90 transition-colors"
         >
-          Book Now
+          Pesan Sekarang
           <ArrowRight className="w-4 h-4" />
         </motion.button>
       </div>

@@ -160,7 +160,7 @@ const Admin = () => {
                   <DollarSign className="h-4 w-4 text-primary" />
                 </div>
               </div>
-              <p className="text-2xl font-light mb-1">${calculateRevenue().toLocaleString()}</p>
+              <p className="text-2xl font-light mb-1">Rp {calculateRevenue().toLocaleString('id-ID')}</p>
               <p className="text-xs text-muted-foreground font-light">Est. Revenue</p>
             </Card>
           </motion.div>
