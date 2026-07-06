@@ -7,6 +7,15 @@ const BackgroundMusic = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const hasInteractedRef = useRef(false);
+
+  const attemptPlay = (audio: HTMLAudioElement) => {
+    audio.play()
+      .then(() => setIsPlaying(true))
+      .catch(() => {
+        // Autoplay blocked — will play on first user interaction
+      });
+  };
 
   useEffect(() => {
     // Create audio element
@@ -16,17 +25,35 @@ const BackgroundMusic = () => {
     audio.preload = "auto";
     audioRef.current = audio;
 
-    const handleCanPlay = () => setIsLoaded(true);
-    const handleLoadedData = () => setIsLoaded(true);
-    audio.addEventListener("canplaythrough", handleCanPlay);
-    audio.addEventListener("loadeddata", handleLoadedData);
+    const handleReady = () => {
+      setIsLoaded(true);
+      attemptPlay(audio);
+    };
+
+    audio.addEventListener("canplaythrough", handleReady, { once: true });
+    audio.addEventListener("loadeddata", handleReady, { once: true });
+
+    // Listen for first user interaction to unblock autoplay
+    const handleInteraction = () => {
+      if (hasInteractedRef.current) return;
+      hasInteractedRef.current = true;
+      if (!audio.paused) return;
+      audio.play()
+        .then(() => setIsPlaying(true))
+        .catch(() => {});
+    };
+
+    document.addEventListener("click", handleInteraction, { once: true });
+    document.addEventListener("touchstart", handleInteraction, { once: true });
+    document.addEventListener("keydown", handleInteraction, { once: true });
+    document.addEventListener("scroll", handleInteraction, { once: true });
 
     // Cleanup
     return () => {
       audio.pause();
       audio.src = "";
-      audio.removeEventListener("canplaythrough", handleCanPlay);
-      audio.removeEventListener("loadeddata", handleLoadedData);
+      audio.removeEventListener("canplaythrough", handleReady);
+      audio.removeEventListener("loadeddata", handleReady);
     };
   }, []);
 
@@ -39,10 +66,7 @@ const BackgroundMusic = () => {
     } else {
       audioRef.current.play()
         .then(() => setIsPlaying(true))
-        .catch(() => {
-          // Autoplay blocked — user interaction already happened
-          setIsPlaying(false);
-        });
+        .catch(() => {});
     }
   };
 
