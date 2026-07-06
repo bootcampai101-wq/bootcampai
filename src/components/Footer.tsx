@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-background/20 pt-8 mt-12 text-center text-background/50 text-xs font-light">
-          <p>&copy; 2026 Wild Haven. All rights reserved.</p>
+          <p>By: Abdurrahman</p>
         </div>
       </div>
     </footer>;
